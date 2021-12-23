@@ -5378,8 +5378,8 @@ self.C3_ExpressionFuncs = [
 			const v1 = p._GetNode(1).GetVar();
 			return () => (v0.GetValue() * v1.GetValue());
 		},
-		() => 10000000,
 		() => "Incorrect",
+		() => 10000000,
 		() => "Game",
 		() => "Double Or Nothing",
 		() => "FinalBet",
