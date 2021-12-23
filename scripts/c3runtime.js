@@ -4926,25 +4926,19 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.System.Cnds.CompareVar,
-		C3.Plugins.Text.Cnds.CompareInstanceVar,
-		C3.Plugins.System.Cnds.TriggerOnce,
-		C3.Plugins.Text.Acts.TypewriterText,
-		C3.Plugins.System.Acts.Wait,
-		C3.Plugins.System.Acts.AddVar,
-		C3.Plugins.Touch.Cnds.OnTapGesture,
-		C3.Plugins.Text.Cnds.IsRunningTypewriterText,
-		C3.Plugins.Text.Acts.SetText,
-		C3.Plugins.Text.Acts.TypewriterFinish,
 		C3.Plugins.System.Exps.choose,
+		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Acts.SetPosToObject,
 		C3.Plugins.Text.Acts.SetFontFace,
 		C3.Behaviors.DragnDrop.Cnds.OnDrop,
 		C3.Plugins.Sprite.Cnds.IsOverlapping,
 		C3.Plugins.Text.Acts.SetPos,
+		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
+		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Acts.SubVar,
+		C3.Plugins.System.Cnds.TriggerOnce,
 		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Behaviors.Sin.Acts.SetEnabled,
 		C3.Plugins.scormc2.Acts.initialiseLMS,
@@ -4969,6 +4963,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetSize,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Cnds.IsMirrored,
+		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Sprite.Acts.SetWidth,
 		C3.Plugins.Sprite.Cnds.CompareWidth,
 		C3.Plugins.Sprite.Exps.Width,
@@ -5298,24 +5293,15 @@ self.C3_ExpressionFuncs = [
 		() => "Instructions",
 		() => "Instructions Text",
 		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
-		},
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			const v1 = p._GetNode(1).GetVar();
-			return () => ((v0.GetValue() + "\n") + v1.GetValue());
-		},
-		() => "Answer the questions and earn money for correct answers.",
-		() => "Invest according to your own confidence in your answer. ",
-		() => "The more you invest, the more you can earn, but BE CAREFUL!\nIf you answer incorrectly,\nyou'll lose your investment!",
-		() => "How much can you earn?",
-		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24);
 		},
 		() => "Tutorial",
 		() => "QuestionUI",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
+		},
 		() => "Arial",
 		() => "Question",
 		() => "Bet",
