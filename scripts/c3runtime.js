@@ -5339,6 +5339,7 @@ self.C3_ExpressionFuncs = [
 			const v0 = p._GetNode(0).GetVar();
 			return () => and("Bet: $", v0.GetValue());
 		},
+		() => 0.1,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (v0.GetValue() - 100);
@@ -5427,7 +5428,6 @@ self.C3_ExpressionFuncs = [
 		() => "TitleFlyingMoney2",
 		() => "Progress",
 		() => 482,
-		() => 0.1,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 4.8);
